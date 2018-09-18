@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import history from "utils/history";
 import configureStore from "store/configureStore";
 import Heading from "components/heading/Heading";
@@ -12,7 +12,7 @@ const store = configureStore();
 
 export default () => (
   <Provider store={store}>
-    <Router history={history}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="app">
         <Heading />
         <Switch>
@@ -20,6 +20,6 @@ export default () => (
           <Route exact={true} path="/statistics/:id" component={Statistics} />
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   </Provider>
 );

@@ -10,7 +10,7 @@
     "test": "NODE_PATH=src CI=true react-scripts test --env=jsdom",
     "test:watch": "NODE_PATH=src react-scripts test --env=jsdom",
     "precommit": "npm run test && npm run && npm run lint:js",
-    "dev": "NODE_PATH=src react-scripts start & node ./server/app.js",
+    "dev": "NODE_PATH=src react-scripts start",
     "build": "NODE_PATH=src react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

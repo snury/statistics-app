@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { push } from "react-router-redux";
 import { getClassName } from "kit/utils/components";
@@ -48,7 +49,7 @@ class Monitoring extends Component {
         break;
 
       case 2:
-        this.props.routerPush(`/statistics/${id}`);
+        this.props.history.push(`/statistics/${id}`);
         break;
 
       default:
@@ -77,9 +78,9 @@ const mapStateToProps = ({ monitoring: { monitoringsData } }) => ({
   data: monitoringsData
 });
 
-export default connect(mapStateToProps, {
+export default withRouter(connect(mapStateToProps, {
   loadMonitoringData,
   activateMonitoring,
   deactivateMonitoring,
   routerPush: push
-})(Monitoring);
+})(Monitoring));
