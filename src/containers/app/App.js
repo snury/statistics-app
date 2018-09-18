@@ -1,7 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import history from "utils/history";
 import configureStore from "store/configureStore";
 import Heading from "components/heading/Heading";
 import Monitoring from "containers/monitoring/Monitoring";
