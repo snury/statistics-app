@@ -1,0 +1,15 @@
+@import "~kit/styles/colors";
+
+$background-color: $whisper;
+
+html {
+  background-color: $background-color;
+}
+
+html, body, #root, .app {
+  height: 100%;
+}
+
+.app {
+  background-color: $background-color;
+}

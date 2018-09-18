@@ -1,0 +1,29 @@
+@import "~kit/styles/colors";
+
+$domain-stroke-color: $gainsboro;
+
+.statistics {
+  &__heading {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .domain {
+    stroke: $domain-stroke-color;
+  }
+
+  .x {
+    .tick {
+      text {
+        transform: rotate(-45deg);
+        text-anchor: end;
+      }
+    }
+  }
+
+  .tick {
+    text {
+      font-size: 10px;
+    }
+  }
+}

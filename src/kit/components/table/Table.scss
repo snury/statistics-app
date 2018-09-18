@@ -1,0 +1,11 @@
+@import "~kit/styles/colors";
+
+.table {
+  &__cell {
+    &--highlighted {
+      color: #fff;
+      border-radius: 3px;
+      padding: 3px 7px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 40px;
+  background-color: gainsboro;
+  &__title {
+    font-size: 22px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
